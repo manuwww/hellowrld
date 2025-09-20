@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello WRLD</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+
+  h1, h2 { margin-bottom: 15px; cursor: pointer; }
+  h2 { font-size: 3em; }
+  p { margin-bottom: 10px; }
+
+  /* Header */
+  header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    font-size: 5em;
+    font-weight: bold;
+    padding-left: 60px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  /* Video */
+  .parallax {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  }
+  video.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Logline */
+  .logline-container {
+    background: transparent;
+    color: black;
+  }
+  .logline-container h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    color: black;
+    margin: 0 0 10px 0;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .logline-container .content {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* Allgemeine Container */
+  section.toggle-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  section.toggle-container h2 {
+    margin: 0 0 10px 0;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  section.toggle-container .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    transition: height 0.5s ease, opacity 0.5s ease;
+  }
+  section.toggle-container.open .content {
+    opacity: 1;
+  }
+
+  /* Unterschiedliche Headline-Farben */
+  .info-container-title { color: #0055ff; }   
+  .budget-container-title { color: #008800; } 
+  .creator-container-title { color: #ff6600; }
+  .episodes-container-title { color: #800080;}
+  .dynamic-scene-title { color: #00cccc; }    
+
+  /* Info Container */
+  .info-container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  .info-container .column { flex: 1; min-width: 300px; }
+
+  /* Creator */
+  .creator-container img {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .creator-container p { max-width: 700px; }
+
+  /* Episoden */
+  .episodes-container .episodes-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .episodes-container .episode {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+  }
+  .episodes-container .episode img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Dynamische 3D-Ansicht */
+  .dynamic-scene {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    background: none;
+  }
+  .dynamic-scene iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    display: block;
+  }
+
+  /* Footer kleiner */
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 40px;
+  }
+  footer .social-icons { margin-bottom: 15px; }
+  footer .social-icons a {
+    color: #aaa;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
+</style>
+</head>
+<body>
+
+<header onclick="location.reload()">Hello WRLD</header>
+
+<!-- Video -->
+<section class="parallax">
+  <video class="background-video" autoplay muted loop>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Dein Browser unterstützt das Video-Tag nicht.
+  </video>
+  <h2>Video Section</h2>
+</section>
+
+<!-- Logline -->
+<section class="toggle-container logline-container open">
+  <h2>Dies ist die Logline – Groß und Zentriert</h2>
+  <div class="content">
+    <p>Hier steht die Logline-Info, die ein- und ausgeklappt werden kann.</p>
+  </div>
+</section>
+
+<!-- Info Container -->
+<section class="toggle-container">
+  <h2 class="info-container-title">Info Container</h2>
+  <div class="content">
+    <div class="info-container">
+      <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a magna non elit laoreet commodo. Curabitur ac sapien nec elit pharetra laoreet.</p>
+        <p>Aliquam eget sapien sapien. Curabitur in metus urna. Sed sit amet turpis ut nulla bibendum malesuada.</p>
+      </div>
+      <div class="column">
+        <p>Quisque vel lacus ac velit ornare lobortis. Morbi ut urna at lorem facilisis fermentum.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus nec purus non magna fringilla.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Budget Container -->
+<section class="toggle-container">
+  <h2 class="budget-container-title">Budget</h2>
+  <div class="content">
+    <p>Hier steht der Text für das Budget. Links bündig ausgerichtet. Beispieltext: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a magna non elit laoreet commodo.</p>
+  </div>
+</section>
+
+<!-- Creator Container -->
+<section class="toggle-container creator-container">
+  <h2 class="creator-container-title">Creator</h2>
+  <div class="content">
+    <img src="https://via.placeholder.com/400x300" alt="Creator">
+    <p>Dies ist ein längerer Beispieltext für den Creator-Abschnitt. Der Text steht linksbündig unterhalb des Bildes und beschreibt den Creator ausführlich. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a orci nec justo facilisis fermentum.</p>
+  </div>
+</section>
+
+<!-- Episodes Container -->
+<section class="toggle-container episodes-container">
+  <h2 class="episodes-container-title">Episoden</h2>
+  <div class="content">
+    <div class="episodes-row">
+      <div class="episode">
+        <h3>Episode 1</h3>
+        <img src="https://via.placeholder.com/300x200" alt="Episode 1">
+        <p>Beschreibung für Episode 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="episode">
+        <h3>Episode 2</h3>
+        <img src="https://via.placeholder.com/300x200" alt="Episode 2">
+        <p>Beschreibung für Episode 2. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+      </div>
+      <div class="episode">
+        <h3>Episode 3</h3>
+        <img src="https://via.placeholder.com/300x200" alt="Episode 3">
+        <p>Beschreibung für Episode 3. Curabitur ac sapien nec elit pharetra laoreet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dynamic 3D Scene -->
+<section class="toggle-container dynamic-scene">
+  <h2 class="dynamic-scene-title">Dynamic 3 Scene</h2>
+  <div class="content">
+    <iframe id="viewer" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=256a801e"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="#">🔗</a>
+    <a href="#">🔗</a>
+    <a href="#">🔗</a>
+    <a href="#">🔗</a>
+  </div>
+  <p>&copy; 2025 Your Company</p>
+</footer>
+
+<script>
+  function toggleSection(section) {
+    const content = section.querySelector('.content');
+    if(section.classList.contains('open')) {
+      // schließen
+      content.style.height = content.scrollHeight + "px";
+      requestAnimationFrame(() => { content.style.height = "0"; });
+      section.classList.remove('open');
+    } else {
+      // öffnen
+      content.style.height = content.scrollHeight + "px";
+      section.classList.add('open');
+      content.addEventListener('transitionend', function removeHeight() {
+        content.style.height = "auto"; // danach auto für beliebige Länge
+        content.removeEventListener('transitionend', removeHeight);
+      });
+    }
+  }
+
+  document.querySelectorAll('section.toggle-container').forEach(section => {
+    const headline = section.querySelector('h2');
+    const content = section.querySelector('.content');
+    if(section.classList.contains('open')) {
+      content.style.height = content.scrollHeight + "px";
+      content.addEventListener('transitionend', () => { content.style.height = "auto"; });
+    } else {
+      content.style.height = "0";
+    }
+    headline.addEventListener('click', () => toggleSection(section));
+  });
+
+  // Resize fix
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('section.toggle-container.open .content').forEach(content => {
+      content.style.height = "auto";
+    });
+  });
+</script>
+
+</body>
+</html>
