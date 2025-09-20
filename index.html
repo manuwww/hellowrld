@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -177,9 +177,10 @@
 
 <!-- Logline -->
 <section class="toggle-container logline-container open">
-  <h2>Dies ist die Logline – Groß und Zentriert</h2>
+  <h2>HELLO WRLD – Miniature Surreal Universes</h2>
   <div class="content">
-    <p>Hier steht die Logline-Info, die ein- und ausgeklappt werden kann.</p>
+    <p>HELLO WRLD is a daring hybrid microseries compressed into 60–90 second episodes. Each clip begins in a familiar, mundane space — a street corner, a stairwell, a living room — and then fractures, revealing a hidden surreal layer, as if reality itself was glitching. Everyday environments are volumetrically scanned, processed as Gaussian splats, and staged inside Unreal Engine 5, where real-time rendering blends with stop-motion, motion capture, and VFX. The result: miniature, poetic universes that balance humor, absurdity, and magical realism.</p>
+    <p>The project has two goals: (1) to create a series of experimental short films for festivals and digital platforms, and (2) to test and document a scalable production pipeline using UE5 for volumetric storytelling, real-time collage, and Gaussian splat integration. With MegaGrant support, we aim to prototype 2–3 episodes and establish the technical foundation for a full season of 12 episodes, adaptable across vertical (social/web), horizontal (streaming), and XR formats.</p>
   </div>
 </section>
 
@@ -189,12 +190,10 @@
   <div class="content">
     <div class="info-container">
       <div class="column">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a magna non elit laoreet commodo. Curabitur ac sapien nec elit pharetra laoreet.</p>
-        <p>Aliquam eget sapien sapien. Curabitur in metus urna. Sed sit amet turpis ut nulla bibendum malesuada.</p>
+        <p>HELLO WRLD is a daring hybrid microseries compressed into 60–90 second episodes. Each clip begins in a familiar, mundane space — a street corner, a stairwell, a living room — and then fractures, revealing a hidden surreal layer, as if reality itself was glitching. Everyday environments are volumetrically scanned, processed as Gaussian splats, and staged inside Unreal Engine 5, where real-time rendering blends with stop-motion, motion capture, and VFX.</p>
       </div>
       <div class="column">
-        <p>Quisque vel lacus ac velit ornare lobortis. Morbi ut urna at lorem facilisis fermentum.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus nec purus non magna fringilla.</p>
+        <p>The result: miniature, poetic universes that balance humor, absurdity, and magical realism. The project has two goals: (1) create a series of experimental short films for festivals and digital platforms, (2) test and document a scalable production pipeline using UE5 for volumetric storytelling, real-time collage, and Gaussian splat integration.</p>
       </div>
     </div>
   </div>
@@ -204,7 +203,11 @@
 <section class="toggle-container">
   <h2 class="budget-container-title">Budget</h2>
   <div class="content">
-    <p>Hier steht der Text für das Budget. Links bündig ausgerichtet. Beispieltext: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a magna non elit laoreet commodo.</p>
+    <p>$5,000 – Story development & concept design (story sprints, storyboards, animatics)</p>
+    <p>$6,000 – Environment capture & volumetric pipeline testing (Gaussian splats, UE5 integration, hardware)</p>
+    <p>$7,000 – Hybrid animation pipeline (motion capture, stop-motion integration, UE5 workflow build)</p>
+    <p>$5,000 – Production of 2–3 prototype episodes (60–90s each, rendered in UE5)</p>
+    <p>$2,000 – Documentation & outreach (community sharing, making-of, festival submissions)</p>
   </div>
 </section>
 
@@ -213,7 +216,7 @@
   <h2 class="creator-container-title">Creator</h2>
   <div class="content">
     <img src="bio.png" alt="Creator">
-    <p>Dies ist ein längerer Beispieltext für den Creator-Abschnitt. Der Text steht linksbündig unterhalb des Bildes und beschreibt den Creator ausführlich. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a orci nec justo facilisis fermentum.</p>
+    <p>She is a Creative XR Producer and Animator with a BA in Animation from HSLU. With a background in audiovisual media and design, she works at the intersection of storytelling, art, and technology. Additionally, she curates and produces exhibitions and festivals, both nationally and internationally.</p>
   </div>
 </section>
 
@@ -225,76 +228,9 @@
       <div class="episode">
         <h3>Episode 1</h3>
         <img src="ep01.png" alt="Episode 1">
-        <p>Beschreibung für Episode 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Stranded at a rainy bus stop, a woman finds her only companion is a giant worm monopolizing the bench, whose silent, unblinking gaze feels disturbingly intimate.</p>
       </div>
       <div class="episode">
         <h3>Episode 2</h3>
         <img src="ep02.png" alt="Episode 2">
-        <p>Beschreibung für Episode 2. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-      </div>
-      <div class="episode">
-        <h3>Episode 3</h3>
-        <img src="ep03.png" alt="Episode 3">
-        <p>Beschreibung für Episode 3. Curabitur ac sapien nec elit pharetra laoreet.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Dynamic 3D Scene -->
-<section class="toggle-container dynamic-scene">
-  <h2 class="dynamic-scene-title">Dynamic 3 Scene</h2>
-  <div class="content">
-    <iframe id="viewer" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=256a801e"></iframe>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="social-icons">
-    <a href="#">🔗</a>
-    <a href="#">🔗</a>
-    <a href="#">🔗</a>
-    <a href="#">🔗</a>
-  </div>
-  <p>&copy; 2025 Your Company</p>
-</footer>
-
-<script>
-  function toggleSection(section) {
-    const content = section.querySelector('.content');
-    if(section.classList.contains('open')) {
-      content.style.height = content.scrollHeight + "px";
-      requestAnimationFrame(() => { content.style.height = "0"; });
-      section.classList.remove('open');
-    } else {
-      content.style.height = content.scrollHeight + "px";
-      section.classList.add('open');
-      content.addEventListener('transitionend', function removeHeight() {
-        content.style.height = "auto";
-        content.removeEventListener('transitionend', removeHeight);
-      });
-    }
-  }
-
-  document.querySelectorAll('section.toggle-container').forEach(section => {
-    const headline = section.querySelector('h2');
-    const content = section.querySelector('.content');
-    if(section.classList.contains('open')) {
-      content.style.height = content.scrollHeight + "px";
-      content.addEventListener('transitionend', () => { content.style.height = "auto"; });
-    } else {
-      content.style.height = "0";
-    }
-    headline.addEventListener('click', () => toggleSection(section));
-  });
-
-  window.addEventListener('resize', () => {
-    document.querySelectorAll('section.toggle-container.open .content').forEach(content => {
-      content.style.height = "auto";
-    });
-  });
-</script>
-
-</body>
-</html>
+        <p
