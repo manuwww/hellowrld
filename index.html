@@ -9,27 +9,22 @@
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
   h1, h2 { margin-bottom: 15px; cursor: pointer; }
-  h2 { font-size: 3em; }
+  h2 { font-size: 2em; }
   p { margin-bottom: 10px; }
 
   /* Header */
   header {
-    height: 150px;
-    display: flex;
-    align-items: center;
-    background: #000;
-    color: #fff;
-    font-size: 5em;
-    font-weight: bold;
-    padding-left: 60px;
-    text-align: left;
+    width: 100%;
+    height: 180px;
+    background: url('header_black.jpg') no-repeat center center;
+    background-size: cover;
     cursor: pointer;
   }
 
   /* Video */
   .parallax {
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,51 +43,40 @@
 
   /* Logline */
   .logline-container {
-    background: transparent;
-    color: black;
+    background: #fff;
+    color: #000;
   }
   .logline-container h2 {
-    font-size: 4em;
+    font-size: 2em;
     text-transform: uppercase;
-    color: black;
-    margin: 0 0 10px 0;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 20px;
   }
   .logline-container .content {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
   }
 
-  /* Allgemeine Container */
+  /* Toggle Sections */
   section.toggle-container {
-    max-width: 1400px;
-    margin: 0 auto;
     background: #f5f5f5;
     border-bottom: 1px solid #ddd;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
   }
   section.toggle-container h2 {
-    margin: 0 0 10px 0;
-    padding-left: 80px;
-    padding-right: 80px;
+    margin-bottom: 10px;
   }
   section.toggle-container .content {
     overflow: hidden;
     height: 0;
     opacity: 0;
-    padding-left: 80px;
-    padding-right: 80px;
     transition: height 0.5s ease, opacity 0.5s ease;
   }
   section.toggle-container.open .content {
     opacity: 1;
   }
 
-  /* Unterschiedliche Headline-Farben */
+  /* Headline Colors */
   .info-container-title { color: #0055ff; }   
   .budget-container-title { color: #008800; } 
   .creator-container-title { color: #ff6600; }
@@ -102,126 +86,125 @@
   /* Info Container */
   .info-container {
     display: flex;
-    gap: 60px;
+    gap: 20px;
     flex-wrap: wrap;
   }
-  .info-container .column { flex: 1; min-width: 300px; }
+  .info-container .column { flex: 1; min-width: 260px; }
 
   /* Creator */
   .creator-container img {
-    max-width: 400px;
-    width: 100%;
-    display: block;
+    max-width: 100%;
+    border-radius: 10px;
     margin-bottom: 20px;
   }
   .creator-container p { max-width: 700px; }
 
-  /* Episoden */
-  .episodes-container .episodes-row {
+  /* Episodes */
+  .episodes-row {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
   }
-  .episodes-container .episode {
+  .episode {
     flex: 1;
-    min-width: 250px;
-    text-align: left;
+    min-width: 240px;
   }
-  .episodes-container .episode img {
+  .episode img {
     width: 100%;
+    border-radius: 6px;
     margin-bottom: 10px;
   }
 
-  /* Dynamische 3D-Ansicht */
-  .dynamic-scene {
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    background: none;
-  }
+  /* Dynamic Scene */
   .dynamic-scene iframe {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     border: none;
-    display: block;
   }
 
-  /* Footer kleiner */
+  /* Footer */
   footer {
     background: #111;
     color: white;
     text-align: center;
-    padding: 30px 40px;
+    padding: 20px;
   }
-  footer .social-icons { margin-bottom: 15px; }
+  footer .social-icons {
+    margin-bottom: 15px;
+  }
   footer .social-icons a {
     color: #aaa;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    h2 { font-size: 1.5em; }
+    .logline-container h2 { font-size: 1.3em; }
+    .info-container { flex-direction: column; }
+    .episodes-row { flex-direction: column; }
+    header { height: 120px; }
   }
 </style>
 </head>
 <body>
 
-<header onclick="location.reload()">Hello WRLD</header>
+<header onclick="location.reload()"></header>
 
 <!-- Video -->
 <section class="parallax">
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://ik.imagekit.io/manuwww/bg.mp4?updatedAt=1758394874547" type="video/mp4">
-    Dein Browser unterstützt das Video-Tag nicht.
   </video>
-  <h2></h2>
 </section>
 
 <!-- Logline -->
 <section class="toggle-container logline-container open">
-  <h2>HELLO WRLD – miniature universes that balance humor, absurdity, beyond realism.
-</h2>
+  <h2>HELLO WRLD – miniature universes between humor, absurdity, and magical realism.</h2>
   <div class="content">
-    <p>HELLO WRLD is a hybrid microseries compressed into 60–90 second episodes. Each clip begins in a familiar, mundane space — a street corner, a stairwell, a living room — and then fractures, revealing a hidden surreal layer, as if reality itself was glitching. Everyday environments are volumetrically scanned, processed as Gaussian splats, and staged inside Unreal Engine 5, where real-time rendering blends with stop-motion, motion capture, and VFX. The result: miniature, poetic universes that balance humor, absurdity, and magical realism.</p>
-    <p> </p>
+    <p>Each short episode begins in an everyday space — a street corner, a stairwell, a living room — and then fractures, revealing a surreal layer as if reality itself glitched. Volumetric scans are processed as Gaussian splats and staged in Unreal Engine 5, blending real-time rendering with stop-motion, motion capture, and VFX.</p>
   </div>
 </section>
 
-<!-- Info Container -->
+<!-- Info -->
 <section class="toggle-container">
-  <h2 class="info-container-title">Info Container</h2>
+  <h2 class="info-container-title">Info</h2>
   <div class="content">
     <div class="info-container">
       <div class="column">
-        <p>HELLO WRLD is a hybrid microseries compressed into 60–90 second episodes. Each clip begins in a familiar, mundane space — a street corner, a stairwell, a living room — and then fractures, revealing a hidden surreal layer, as if reality itself was glitching. Everyday environments are volumetrically scanned, processed as Gaussian splats, and staged inside Unreal Engine 5, where real-time rendering blends with stop-motion, motion capture, and VFX.</p>
+        <p>HELLO WRLD is a microseries of 60–90s experimental shorts. Each explores how the ordinary world can suddenly fracture into the surreal, staged through UE5 with volumetric scans and real-time compositing.</p>
       </div>
       <div class="column">
-        <p>The result: miniature, poetic universes that balance humor, absurdity, and magical realism. The project has two goals: (1) create a series of experimental short films for festivals and digital platforms, (2) test and document a scalable production pipeline using UE5 for volumetric storytelling, real-time collage, and Gaussian splat integration.</p>
+        <p>The goals are: (1) creating a series for festivals and digital platforms, (2) testing a scalable UE5 pipeline for Gaussian splats, hybrid animation, and real-time collage workflows.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Budget Container -->
+<!-- Budget -->
 <section class="toggle-container">
   <h2 class="budget-container-title">Budget</h2>
   <div class="content">
-    <p> - $5,000: Story development & concept design (story sprints, storyboards, animatics)</p>
-    <p> - $6,000: Environment capture & volumetric pipeline testing (Gaussian splats, UE5 integration, hardware)</p>
-    <p> - $7,000: Hybrid animation pipeline (motion capture, stop-motion integration, UE5 workflow build)</p>
-    <p> - $5,000: Production of 2–3 prototype episodes (60–90s each, rendered in UE5)</p>
-    <p> - $2,000: Documentation & outreach (community sharing, making-of, festival submissions)</p>
+    <p>$5,000 — Story development & concept design</p>
+    <p>$6,000 — Volumetric scanning & UE5 pipeline testing</p>
+    <p>$7,000 — Hybrid animation pipeline (MoCap, stop-motion)</p>
+    <p>$5,000 — Production of 2–3 prototype episodes</p>
+    <p>$2,000 — Documentation & festival submissions</p>
   </div>
 </section>
 
-<!-- Creator Container -->
+<!-- Creator -->
 <section class="toggle-container creator-container">
   <h2 class="creator-container-title">Creator</h2>
   <div class="content">
     <img src="bio.png" alt="Creator">
-    <p>She is a Creative XR Producer and Animator with a BA in Animation from HSLU. With a background in audiovisual media and design, she works at the intersection of storytelling, art, and technology. Additionally, she curates and produces exhibitions and festivals, both nationally and internationally.</p>
+    <p>Creative XR Producer and Animator with a BA in Animation (HSLU). Experienced in combining volumetric capture, hybrid animation, and UE5 pipelines. Her work bridges storytelling, technology, and experimental aesthetics, with international recognition in exhibitions and festivals.</p>
   </div>
 </section>
 
-<!-- Episodes Container -->
+<!-- Episodes -->
 <section class="toggle-container episodes-container">
   <h2 class="episodes-container-title">Episode Examples</h2>
   <div class="content">
@@ -229,23 +212,23 @@
       <div class="episode">
         <h3>Episode 1</h3>
         <img src="ep01.png" alt="Episode 1">
-        <p>Stranded at a rainy bus stop, a woman finds her only companion is a giant worm monopolizing the bench, whose silent, unblinking gaze feels disturbingly intimate.</p>
+        <p>At a rainy bus stop, a woman finds her only company is a giant worm, its unblinking gaze disturbingly intimate.</p>
       </div>
       <div class="episode">
         <h3>Episode 2</h3>
         <img src="ep02.png" alt="Episode 2">
-        <p>Annabelle lies in bed, a flicker of nervous anticipation in her eyes, as she expects her companion to join her, its return from the bathroom a prelude to their unusual bond.</p>
+        <p>Annabelle lies in bed, waiting for her companion’s return. But what joins her is not what we expect.</p>
       </div>
       <div class="episode">
         <h3>Episode 3</h3>
         <img src="ep03.png" alt="Episode 3">
-        <p>An elderly woman, convinced she's a glitch in the matrix, takes selfies at the edge of a fading reality, hoping to capture proof before the system reboots her out of existence.</p>
+        <p>An elderly woman, believing she’s a glitch, takes selfies at the fading edge of reality — before the system reboots her.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Dynamic 3D Scene -->
+<!-- Dynamic Scene -->
 <section class="toggle-container dynamic-scene">
   <h2 class="dynamic-scene-title">Dynamic 3D Scene</h2>
   <div class="content">
@@ -256,7 +239,6 @@
 <!-- Footer -->
 <footer>
   <div class="social-icons">
-    <a href="#">🔗</a>
     <a href="#">🔗</a>
     <a href="#">🔗</a>
     <a href="#">🔗</a>
@@ -302,4 +284,3 @@
 
 </body>
 </html>
-
