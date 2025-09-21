@@ -9,14 +9,14 @@
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
   h1, h2 { margin-bottom: 15px; cursor: pointer; }
-  h2 { font-size: 2em; }
+  h2 { font-size: 2em; position: relative; display: inline-block; }
   p { margin-bottom: 10px; }
 
   /* Header */
   header {
     width: 100%;
     height: 180px;
-    background: url('header_black.jpg') no-repeat center center;
+    background: url('header_black2.jpg') no-repeat center center;
     background-size: cover;
     cursor: pointer;
   }
@@ -45,6 +45,7 @@
   .logline-container {
     background: #fff;
     color: #000;
+    width: 100%;
   }
   .logline-container h2 {
     font-size: 2em;
@@ -59,9 +60,8 @@
   section.toggle-container {
     background: #f5f5f5;
     border-bottom: 1px solid #ddd;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 40px 20px;
+    width: 100%;
   }
   section.toggle-container h2 {
     margin-bottom: 10px;
@@ -82,6 +82,19 @@
   .creator-container-title { color: #ff6600; }
   .episodes-container-title { color: #800080;}
   .dynamic-scene-title { color: #00cccc; }    
+
+  /* Glitch Animation */
+  @keyframes glitch {
+    0% { text-shadow: 2px 0 red, -2px 0 blue; }
+    20% { text-shadow: -2px -2px lime, 2px 2px magenta; }
+    40% { text-shadow: 2px -2px cyan, -2px 2px yellow; }
+    60% { text-shadow: -3px 0 red, 3px 0 blue; }
+    80% { text-shadow: 2px 2px lime, -2px -2px magenta; }
+    100% { text-shadow: none; }
+  }
+  h2:hover {
+    animation: glitch 0.5s infinite;
+  }
 
   /* Info Container */
   .info-container {
@@ -124,10 +137,11 @@
 
   /* Footer */
   footer {
-    background: #111;
+    background: url('footer_black.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
   }
   footer .social-icons {
     margin-bottom: 15px;
@@ -164,7 +178,7 @@
 <section class="toggle-container logline-container open">
   <h2>HELLO WRLD – miniature universes between humor, absurdity, and magical realism.</h2>
   <div class="content">
-    <p>Each short episode begins in an everyday space — a street corner, a stairwell, a living room — and then fractures, revealing a surreal layer as if reality itself glitched. Volumetric scans are processed as Gaussian splats and staged in Unreal Engine 5, blending real-time rendering with stop-motion, motion capture, and VFX.</p>
+    <p>Each short episode begins in an everyday space, a street corner, a stairwell, a living room and then fractures, revealing a surreal layer as if reality itself glitched. Volumetric scans are processed as Gaussian splats and staged in Unreal Engine 5, blending real-time rendering with stop-motion, motion capture, and VFX.</p>
   </div>
 </section>
 
@@ -200,7 +214,7 @@
   <h2 class="creator-container-title">Creator</h2>
   <div class="content">
     <img src="bio.png" alt="Creator">
-    <p>Creative XR Producer and Animator with a BA in Animation (HSLU). Experienced in combining volumetric capture, hybrid animation, and UE5 pipelines. Her work bridges storytelling, technology, and experimental aesthetics, with international recognition in exhibitions and festivals.</p>
+    <p>Creative XR Producer and Animator. Experienced in combining volumetric capture, hybrid animation, and UE5 pipelines. Her work bridges storytelling, technology, and experimental aesthetics, with international recognition in exhibitions and festivals.</p>
   </div>
 </section>
 
