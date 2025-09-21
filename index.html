@@ -8,9 +8,9 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
-  h1, h2 { margin-bottom: 15px; cursor: pointer; }
+  h1, h2 { margin-bottom: 25px; cursor: pointer; }
   h2 { font-size: 2em; position: relative; display: inline-block; }
-  p { margin-bottom: 10px; }
+  p { margin-bottom: 15px; }
 
   /* Header */
   header {
@@ -46,25 +46,28 @@
     background: #fff;
     color: #000;
     width: 100%;
+    padding: 80px 60px;
   }
   .logline-container h2 {
     font-size: 2em;
     text-transform: uppercase;
-    padding: 100px;
+    margin-bottom: 40px;
+    text-align: center;
   }
   .logline-container .content {
-    padding: 100px;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   /* Toggle Sections */
   section.toggle-container {
     background: #f5f5f5;
     border-bottom: 1px solid #ddd;
-    padding: 40px 20px;
+    padding: 80px 60px;
     width: 100%;
   }
   section.toggle-container h2 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   section.toggle-container .content {
     overflow: hidden;
@@ -99,7 +102,7 @@
   /* Info Container */
   .info-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
   }
   .info-container .column { flex: 1; min-width: 260px; }
@@ -108,24 +111,24 @@
   .creator-container img {
     max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .creator-container p { max-width: 700px; }
 
   /* Episodes */
   .episodes-row {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
   }
   .episode {
     flex: 1;
-    min-width: 240px;
+    min-width: 260px;
   }
   .episode img {
     width: 100%;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   /* Dynamic Scene */
@@ -141,10 +144,10 @@
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 25px 20px; /* weniger Höhe */
   }
   footer .social-icons {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   footer .social-icons a {
     color: #aaa;
@@ -156,10 +159,12 @@
   /* Mobile tweaks */
   @media (max-width: 768px) {
     h2 { font-size: 1.5em; }
-    .logline-container h2 { font-size: 1.3em; }
-    .info-container { flex-direction: column; }
-    .episodes-row { flex-direction: column; }
-    header { height: 120px; }
+    .logline-container { padding: 40px 20px; }
+    .logline-container h2 { font-size: 1.3em; margin-bottom: 20px; }
+    section.toggle-container { padding: 40px 20px; }
+    .info-container { flex-direction: column; gap: 20px; }
+    .episodes-row { flex-direction: column; gap: 20px; }
+    header { height: 160px; }
   }
 </style>
 </head>
@@ -176,9 +181,9 @@
 
 <!-- Logline -->
 <section class="toggle-container logline-container open">
-  <h2><center>HELLO WRLD When the world's code glitches, and we see through the cracks: a simulation going wild, reflecting a reality on the verge.</center></h2>
+  <h2>HELLO WRLD – When the world's code glitches, and we see through the cracks.</h2>
   <div class="content">
-    <p>Each short episode begins in an everyday space, a street corner, a stairwell, a living room and then fractures, revealing a surreal layer as if reality itself glitched. Volumetric scans are processed as Gaussian splats and staged in Unreal Engine 5, blending real-time rendering with stop-motion, motion capture, and VFX.</p>
+    <p>Each short episode begins in an everyday space — a street corner, a stairwell, a living room — and then fractures, revealing a surreal layer as if reality itself glitched. Volumetric scans are processed as Gaussian splats and staged in Unreal Engine 5, blending real-time rendering with stop-motion, motion capture, and VFX.</p>
   </div>
 </section>
 
@@ -199,30 +204,29 @@
 
 <!-- Budget -->
 <section class="toggle-container">
-  <h2 class="budget-container-title">BUDGET</h2>
+  <h2 class="budget-container-title">Budget</h2>
   <div class="content">
-   <p><b>$25,000</b></p>
-    <p>$7,000: Location scouting, Environment capture & volumetric pipeline testing (Gaussian splats, UE5 integration, hardware)</p>
-    <p>$3,000:  Story development & concept design (story sprints, storyboards, animatics)</p>
-    <p>$5,000: Hybrid animation pipeline (GS, volumetric and motion capture, animation integration, UE5 workflow build)</p>
-    <p>$7,000: Production of 3–4 pilot episodes (60–90s each, rendered in UE5)</p>
-    <p>$4,000: Documentation & outreach (community sharing and building, community activation, making-of)
-</p>
+    <p><b>$25,000</b></p>
+    <p>$7,000 — Location scouting, environment capture & volumetric pipeline testing</p>
+    <p>$3,000 — Story development & concept design (sprints, storyboards, animatics)</p>
+    <p>$5,000 — Hybrid animation pipeline (volumetric + mocap + UE5 integration)</p>
+    <p>$7,000 — Production of 3–4 pilot episodes (60–90s each, rendered in UE5)</p>
+    <p>$4,000 — Documentation, outreach, and community activation</p>
   </div>
 </section>
 
 <!-- Creator -->
 <section class="toggle-container creator-container">
-  <h2 class="creator-container-title">CREATOR</h2>
+  <h2 class="creator-container-title">Creator</h2>
   <div class="content">
     <img src="bio.png" alt="Creator">
-    <p>Manu Weiss is a Director and Creative XR Producer with a background in Animation. Her work bridges art and technology, blending documentary fragments, experimental animation, and immersive media. She has curated XR exhibitions, Workshops, Conferences and produced hybrid projects exploring how digital tools reshape storytelling.</p>
+    <p>Manu Weiss is a Director and Creative XR Producer with a background in Animation. Her work bridges art and technology, blending documentary fragments, experimental animation, and immersive media. She has curated XR exhibitions, workshops, and produced hybrid projects exploring how digital tools reshape storytelling.</p>
   </div>
 </section>
 
 <!-- Episodes -->
 <section class="toggle-container episodes-container">
-  <h2 class="episodes-container-title">EPISODES (wip)</h2>
+  <h2 class="episodes-container-title">Episodes (WIP)</h2>
   <div class="content">
     <div class="episodes-row">
       <div class="episode">
@@ -233,13 +237,12 @@
       <div class="episode">
         <h3>Tiberius's Gallery</h3>
         <img src="ep02.png" alt="Episode 2">
-        <p>The faces in Tiberius's once beloved framed portraits come to life, their whispers turning into a relentless chorus of judgment, condemning him as a pathetic failure.
-</p>
+        <p>The faces in Tiberius's once beloved framed portraits come to life, their whispers turning into a relentless chorus of judgment, condemning him as a pathetic failure.</p>
       </div>
       <div class="episode">
         <h3>The Final Frame</h3>
         <img src="ep03.png" alt="Episode 3">
-        <p>At her late husband's grave, Eleanor aims for one last selfie, not for memories, but for proof of her existence before the system's reboot itself.</p>
+        <p>At her late husband's grave, Eleanor aims for one last selfie, not for memories, but for proof of her existence before the system reboots itself.</p>
       </div>
     </div>
   </div>
@@ -247,7 +250,7 @@
 
 <!-- Dynamic Scene -->
 <section class="toggle-container dynamic-scene">
-  <h2 class="dynamic-scene-title">3D SCENE</h2>
+  <h2 class="dynamic-scene-title">3D Scene</h2>
   <div class="content">
     <iframe id="viewer" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=256a801e"></iframe>
   </div>
@@ -301,11 +304,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
